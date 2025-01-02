@@ -1,0 +1,773 @@
+/* General Styles */
+body {
+ font-family: 'Poppins', sans-serif;
+ margin: 0;
+ padding: 0;
+ line-height: 1.6;
+ background-color: #f8f9fa;
+ color: #333;
+ scroll-behavior: smooth;
+ /* Smooth scrolling for navigation */
+}
+
+h2 {
+ font-size: 2.5rem;
+ color: #007bff;
+ text-align: center;
+ margin-bottom: 1.5rem;
+ text-transform: uppercase;
+ font-weight: bold;
+ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+header {
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ background: linear-gradient(to right, #333, #555);
+ /* Gradient background */
+ color: white;
+ padding: 1rem 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ /* Sticky navbar shadow */
+ transition: background-color 0.3s ease-in-out;
+ /* Smooth transition for hover effects */
+}
+
+header:hover {
+ background: linear-gradient(to right, #444, #666);
+ /* Slightly lighter gradient on hover */
+}
+
+header nav ul {
+ display: flex;
+ justify-content: center;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+header nav ul li {
+ margin: 0 1rem;
+}
+
+header nav ul li a {
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+ padding-bottom: 0.5rem;
+ border-bottom: 2px solid transparent;
+ /* Border for hover/active state */
+ transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+ color: #00c6ff;
+ /* Light blue hover color */
+ border-bottom: 2px solid #00c6ff;
+ /* Underline effect on hover */
+}
+
+header nav ul li a.active {
+ color: #00c6ff;
+ border-bottom: 2px solid #00c6ff;
+ /* Persistent underline for active page */
+}
+
+/* Profile Photo */
+.profile-photo {
+ border-radius: 50%;
+ max-width: 200px;
+ margin: 0 auto;
+ display: block;
+}
+
+/* Buttons */
+.btn,
+form button {
+ display: inline-block;
+ padding: 1rem 2rem;
+ background: linear-gradient(to right, #007bff, #0056b3);
+ color: white;
+ border: none;
+ border-radius: 10px;
+ font-size: 1.2rem;
+ cursor: pointer;
+ transition: all 0.3s ease-in-out;
+}
+
+.btn:hover,
+form button:hover {
+ transform: scale(1.05);
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+#skills {
+ background: linear-gradient(to bottom, #f5fafd, #eef6fa);
+ /* Subtle gradient */
+ padding: 4rem 2rem;
+ /* Add side padding for better spacing */
+ border-radius: 10px;
+ text-align: center;
+}
+
+.skills-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+ /* Adjust column size for better fit */
+ gap: 2.5rem;
+ /* Increase gap between items */
+ justify-items: center;
+ align-items: center;
+ /* Vertically align items */
+ max-width: 1000px;
+ /* Restrict the grid's width */
+ margin: 0 auto;
+ /* Center the grid */
+}
+
+.skill img {
+ width: 90px;
+ margin-bottom: 0.5rem;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ /* Smooth hover effect */
+}
+
+.skill img:hover {
+ transform: scale(1.1);
+ /* Slight zoom on hover */
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ /* Add shadow */
+}
+
+.skill p {
+ font-size: 1.1rem;
+ font-weight: bold;
+ text-align: center;
+ color: #333;
+ /* Ensure good contrast with the background */
+ transition: color 0.3s ease;
+ /* Add color change on hover */
+}
+
+.skill:hover p {
+ color: #007bff;
+ /* Text changes to blue on hover */
+}
+
+/* Projects Section */
+#projects {
+ background: linear-gradient(to bottom, #ffffff, #f7f9fc);
+ padding: 3rem 0;
+ border-radius: 10px;
+}
+
+.project-card {
+ background: linear-gradient(135deg, #f7f9fc, #eaf1f8);
+ padding: 1.5rem;
+ margin: 1.5rem 0;
+ border-radius: 10px;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ text-align: center;
+ transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ background: linear-gradient(135deg, #eaf1f8, #d3e3f2);
+}
+
+.project-card h3 {
+ font-size: 1.8rem;
+ color: #003366;
+ margin-bottom: 0.5rem;
+}
+
+.project-card p {
+ margin-bottom: 1rem;
+}
+
+.project-card a {
+ color: #007bff;
+ font-weight: bold;
+ text-decoration: none;
+ transition: color 0.3s;
+}
+
+.project-card a:hover {
+ color: #0056b3;
+ text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+ background: linear-gradient(to bottom, #e0f7fa, #f5f5f5);
+ padding: 3rem 0;
+ border-radius: 10px;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ text-align: center;
+}
+
+#contact h2 {
+ font-size: 2.5rem;
+ text-transform: uppercase;
+ color: #007bff;
+ margin-bottom: 2rem;
+ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+ font-size: 1.2rem;
+ margin: 1rem 0;
+ color: #555;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.contact-info p i {
+ font-size: 1.5rem;
+ color: #007bff;
+ margin-right: 0.5rem;
+}
+
+/* Add hover effects for email */
+.contact-info p a {
+ color: #007bff;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+.contact-info p a:hover {
+ color: #0056b3;
+ text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ header nav ul {
+  flex-direction: column;
+  gap: 1rem;
+ }
+
+ .skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+ }
+
+ .project-card {
+  margin: 1rem 0;
+ }
+
+ form input,
+ form textarea {
+  font-size: 0.9rem;
+ }
+}
+
+/* About Section */
+#about {
+ background: linear-gradient(to bottom, #eef6fa, #dfe9f3);
+ /* Gradient background */
+ padding: 5rem 2rem;
+ border-radius: 15px;
+ text-align: center;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ /* Shadow for depth */
+ position: relative;
+ overflow: hidden;
+ /* To contain the decorative elements */
+}
+
+/* Add decorative circles */
+#about::before,
+#about::after {
+ content: "";
+ position: absolute;
+ border-radius: 50%;
+ background: rgba(255, 255, 255, 0.2);
+ /* Subtle white circles */
+ filter: blur(100px);
+ /* Smooth edges */
+}
+
+#about::before {
+ width: 300px;
+ height: 300px;
+ top: -50px;
+ left: -50px;
+}
+
+#about::after {
+ width: 400px;
+ height: 400px;
+ bottom: -100px;
+ right: -100px;
+}
+/* Particles */
+#about .particles {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ z-index: 0;
+}
+
+#about .particles span {
+ position: absolute;
+ display: block;
+ width: 10px;
+ height: 10px;
+ background: rgba(255, 255, 255, 0.2);
+ border-radius: 50%;
+ animation: float 5s linear infinite;
+}
+
+#about .particles span:nth-child(1) {
+ top: 10%;
+ left: 20%;
+ animation-duration: 6s;
+ animation-delay: 1s;
+}
+
+#about .particles span:nth-child(2) {
+ top: 30%;
+ left: 70%;
+ animation-duration: 8s;
+ animation-delay: 2s;
+}
+
+#about .particles span:nth-child(3) {
+ top: 60%;
+ left: 40%;
+ animation-duration: 7s;
+ animation-delay: 3s;
+}
+
+#about .particles span:nth-child(4) {
+ top: 80%;
+ left: 15%;
+ animation-duration: 9s;
+ animation-delay: 4s;
+}
+
+@keyframes float {
+ 0% {
+  transform: translateY(0);
+  opacity: 1;
+ }
+
+ 100% {
+  transform: translateY(-50px);
+  opacity: 0;
+ }
+}
+
+/* Profile Photo */
+.profile-photo {
+ border-radius: 50%;
+ max-width: 180px;
+ margin-bottom: 1.5rem;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+ transform: scale(1.1);
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings and Text */
+#about h1 {
+ font-size: 3rem;
+ color: #003366;
+ margin-bottom: 1rem;
+ font-weight: bold;
+}
+
+#about p {
+ font-size: 1.2rem;
+ line-height: 1.8;
+ color: #555;
+ max-width: 800px;
+ margin: 0 auto 2rem;
+}
+
+/* Buttons */
+.btn {
+ display: inline-block;
+ background: linear-gradient(to right, #007bff, #0056b3);
+ padding: 1rem 2rem;
+ font-size: 1.2rem;
+ color: white;
+ text-transform: uppercase;
+ border-radius: 8px;
+ font-weight: bold;
+ transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+ background: linear-gradient(to right, #0056b3, #003366);
+ transform: scale(1.05);
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Links */
+.social-links {
+ margin-top: 2rem;
+}
+
+.social-links a {
+ margin: 0 1rem;
+ font-size: 1.5rem;
+ color: #007bff;
+ transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+ color: #0056b3;
+ transform: scale(1.2);
+}
+
+/* Divider */
+.divider svg {
+ display: block;
+ margin: 2rem auto 0;
+ width: 100%;
+ height: auto;
+}
+/* Animation Keyframes */
+@keyframes fadeIn {
+ from {
+  opacity: 0;
+  transform: translateY(20px);
+ }
+
+ to {
+  opacity: 1;
+  transform: translateY(0);
+ }
+}
+
+/* Animation Class */
+.animate {
+ opacity: 0;
+ animation: fadeIn 1s ease-in-out forwards;
+}
+
+.animate-delay-1 {
+ animation-delay: 0.2s;
+}
+
+.animate-delay-2 {
+ animation-delay: 0.4s;
+}
+
+.animate-delay-3 {
+ animation-delay: 0.6s;
+}
+/* Footer Styles */
+footer {
+ background: linear-gradient(to right, #333, #555);
+ color: white;
+ padding: 1rem 0;
+ text-align: center;
+ font-size: 1rem;
+ box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+ margin-top: 2rem;
+}
+
+footer p {
+ margin: 0;
+ font-size: 1rem;
+}
+
+footer p:hover {
+ color: #00c6ff;
+}
+/* Set the page height to fix scrolling */
+body.index {
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
+ height: 100vh;
+ /* Makes the entire page height fit the viewport */
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ /* Space the header, content, and footer */
+ background-color: #f8f9fa;
+ /* Ensure no patchy white styles */
+ color: #333;
+ overflow: hidden;
+ /* Prevent scrolling */
+}
+/* Default body style for all other pages */
+body {
+ height: auto;
+ /* Allow height to adjust based on content */
+ overflow: auto;
+ /* Enable scrolling */
+}
+/* Container alignment for the content */
+#about {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ flex-grow: 1;
+ /* Ensures it takes up remaining vertical space */
+ padding: 1rem;
+}
+
+/* Remove the divider or white patch */
+#about .divider {
+ display: none;
+}
+
+/* Profile photo styling */
+.profile-photo {
+ border-radius: 50%;
+ max-width: 180px;
+ margin-bottom: 1rem;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+ transform: scale(1.1);
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Button */
+.btn {
+ background: linear-gradient(to right, #007bff, #0056b3);
+ padding: 1rem 2rem;
+ font-size: 1.2rem;
+ color: white;
+ text-transform: uppercase;
+ border-radius: 8px;
+ font-weight: bold;
+ transition: all 0.3s ease-in-out;
+ margin-top: 1rem;
+}
+
+.btn:hover {
+ background: linear-gradient(to right, #0056b3, #003366);
+ transform: scale(1.05);
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer {
+ background: linear-gradient(to right, #333, #555);
+ color: white;
+ padding: 1rem 0;
+ text-align: center;
+ font-size: 1rem;
+ box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Footer fixed at the bottom */
+html {
+ height: 100%;
+ /* Ensure the html element takes full height */
+}
+
+body {
+ min-height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+/* Ensure footer stays at the bottom */
+footer {
+ background: linear-gradient(to right, #333, #555);
+ color: white;
+ padding: 1rem 0;
+ text-align: center;
+ font-size: 1rem;
+ box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+ margin-top: auto;
+ /* Push footer to the bottom of the page */
+}
+/* Ensure the html and body occupy the full viewport height */
+html,
+body {
+ height: 100%;
+ /* Full viewport height */
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+}
+
+/* Main content fills the available space */
+main {
+ flex: 1;
+ /* Pushes footer to the bottom of the page */
+}
+
+/* Footer fixed to the bottom */
+footer {
+ background: linear-gradient(to right, #333, #555);
+ color: white;
+ padding: 1rem 0;
+ text-align: center;
+ font-size: 1rem;
+ box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+ margin-top: auto;
+}
+
+/* Remove divider under specific section */
+#skills .divider,
+#projects .divider,
+#about .divider {
+ display: none;
+ /* Hides any unwanted dividers */
+}
+
+/* Contact Section */
+#contact .contact-info {
+ display: flex;
+ flex-direction: column;
+ /* Stack items vertically */
+ align-items: center;
+ /* Center align the items */
+ gap: 1rem;
+ /* Add spacing between items */
+}
+
+#contact .info-item {
+ display: flex;
+ align-items: center;
+ /* Vertically align icon and text */
+ gap: 0.8rem;
+ /* Add space between icon and text */
+ font-size: 1.2rem;
+ /* Increase font size for readability */
+ color: #333;
+ /* Ensure good contrast */
+}
+
+#contact .info-item i {
+ font-size: 1.5rem;
+ /* Increase icon size */
+ color: #007bff;
+ /* Match the theme color */
+}
+
+#contact .info-item p {
+ margin: 0;
+ /* Remove default margin */
+}
+
+#contact .info-item a {
+ color: #007bff;
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s ease;
+}
+
+#contact .info-item a:hover {
+ color: #0056b3;
+}
+/* General Title Styling */
+h2 {
+ font-size: 3rem;
+ /* Larger font size for emphasis */
+ color: #002244;
+ /* Very dark blue to complement the theme */
+ text-align: center;
+ margin-bottom: 1.5rem;
+ text-transform: uppercase;
+ font-weight: 800;
+ /* Extra bold for a modern look */
+ letter-spacing: 0.1em;
+ /* Add slight spacing between letters */
+ text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+ /* Subtle shadow for depth */
+ font-family: 'Poppins', sans-serif;
+ /* Modern font if available */
+}
+
+/* Additional Styling for Specific Pages */
+#skills h2,
+#projects h2,
+#contact h2 {
+ margin-top: 1rem;
+
+}
+
+/* Specific Section Titles */
+#contact h2 {
+ font-size: 3rem;
+ /* Ensure the size is applied */
+ color: #002244;
+ /* Dark blue for "Contact Information" */
+ font-weight: 800;
+ /* Extra bold for emphasis */
+ text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+ /* Subtle depth */
+ text-transform: uppercase;
+ margin-bottom: 1rem;
+ /* Adjust spacing as needed */
+}
+#contact .info-item {
+ display: flex;
+ align-items: flex-start;
+ /* Align items at the top */
+ gap: 0.8rem;
+ /* Space between icon and text */
+ font-size: 1.2rem;
+ color: #333;
+ /* Default text color */
+}
+
+#contact .info-item i {
+ font-size: 1.5rem;
+ color: #002244;
+ /* Matches the title color */
+ margin-right: 0.5rem;
+}
+
+#contact .info-item a {
+ color: #002244;
+ /* Matches the title color */
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s ease;
+ /* Smooth color transition on hover */
+}
+
+#contact .info-item a:hover {
+ color: #0056b3;
+ /* Lighter blue on hover */
+ text-decoration: underline;
+}
+#contact .info-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  gap: 1rem; /* Add space between icon and text */
+}
+
+#contact .info-item i {
+  font-size: 1.5rem;
+  color: #002244; /* Matches the title color */
+  margin-right: 0.5rem; /* Space between the icon and the text */
+  width: 30px; /* Set a fixed width for the icon */
+  text-align: center; /* Center-align the icon */
+}
+
+#contact .info-item p,
+#contact .info-item a {
+  margin: 0; /* Remove default margin */
+  line-height: 1.5; /* Improve spacing for multi-line text */
+}
+
